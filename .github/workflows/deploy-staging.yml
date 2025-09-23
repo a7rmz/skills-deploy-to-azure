@@ -1,4 +1,4 @@
-name: Deploy Staging
+name: Stage the app
 
 on:
   pull_request:
@@ -7,4 +7,4 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    if: contains(gihub.event.pull_request.labels.*.name, "stage")
+    if: contains(github.event.pull_request.labels.*.name, 'stage')
